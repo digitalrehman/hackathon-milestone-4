@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>Modern Resume Builder</h1>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle" class="hidden">
+                <label for="theme-toggle" class="switch"></label>
+                <span id="theme-icon"></span>
+            </div>
+        </header>
+        <main class="container">
+            <section class="form-section">
+                <h2>Enter Your Information</h2>
+                <form id="resume-form">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                        <input type="text" id="location" name="location" placeholder="Location">
+                        <textarea id="summary" name="summary" placeholder="Professional Summary" rows="4"></textarea>
+                        <input type="text" id="skills" name="skills" placeholder="Skills (comma-separated)">
+                    </div>
+                    <div class="section-group">
+                        <h3>Work Experience</h3>
+                        <div id="experience-fields"></div>
+                        <button type="button" id="add-experience" class="btn-secondary">Add Experience</button>
+                    </div>
+                    <div class="section-group">
+                        <h3>Education</h3>
+                        <div id="education-fields"></div>
+                        <button type="button" id="add-education" class="btn-secondary">Add Education</button>
+                    </div>
+                    <button type="button" id="generate-resume" class="btn-primary">Generate Resume</button>
+                </form>
+            </section>
+            <section class="preview-section">
+                <h2>Resume Preview</h2>
+                <div id="resume-preview" class="card">
+                    <p class="placeholder-text">Your resume preview will appear here after generation.</p>
+                </div>
+                <button id="download-resume" class="btn-primary hidden">
+                    <i data-lucide="download"></i> Download Resume
+                </button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
